@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](/images.chatScreenshot.png)
+![](/images/chatScreenshot.png)
 
 ### Links
 
