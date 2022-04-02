@@ -1,0 +1,17 @@
+{
+  "name": "chat-app-ui-illustration",
+  "version": "1.0.0",
+  "description": "A chat app UI illustration built with html and sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.10"
+    
+  }
+}
