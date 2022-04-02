@@ -45,10 +45,10 @@
     border-radius: 25px;
     border: $white solid 10px;
     box-shadow: 4px 34px 59px #cfcfcf;
-
+        
         .header {
             background-image: $app-header-bg;
-            border-radius: 25px 25px 7px 7px;
+            border-radius: 18px 18px 7px 7px;
             padding-bottom: 0.7em;
             border-color: $white;
             border-style: none;
@@ -301,14 +301,5 @@
     }
     p {
         line-height: $paragraph-height;
-    }
-
-    .attribution { 
-        margin-top: 1.5em;
-        line-height: $paragraph-height;
-        font-size: $sub-heading-size; 
-        text-align: left; 
-
-        a { color: hsl(228, 45%, 44%); }
     }
 }
