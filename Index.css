@@ -41,7 +41,6 @@ a {
         -ms-flex-direction: row;
             flex-direction: row;
     overflow-x: hidden;
-    overflow-y: hidden;
   }
 }
 

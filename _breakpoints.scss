@@ -1,6 +1,6 @@
 $breakpoints: (
     "large": 960px,
-    "xl": 2100px,
+    "xl": 1024px,
 );
 
 @mixin large {
@@ -9,10 +9,15 @@ $breakpoints: (
     }
 }
 
+@mixin xl {
+    @media (min-width: map-get($breakpoints, "xl" )) {
+        @content;
+    }
+}
+
 body {
     @include large {
         flex-direction: row;
         overflow-x: hidden;
-        overflow-y: hidden;
     }
 }
