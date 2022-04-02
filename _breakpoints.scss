@@ -8,3 +8,10 @@ $breakpoints: (
         @content;
     }
 }
+
+body {
+    @include large {
+        flex-direction: row;
+        overflow-x: hidden;
+    }
+}

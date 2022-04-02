@@ -14,6 +14,9 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
+  padding-bottom: 2em;
+  margin-bottom: 1em;
+  overflow-y: hidden;
   left: 0;
   color: #a39daa;
   position: relative;
@@ -32,12 +35,23 @@ a {
   text-decoration: none;
 }
 
+@media (min-width: 960px) {
+  body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    overflow-x: hidden;
+  }
+}
+
 .first-section::before {
   content: "";
   position: absolute;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(-12%, #8838ff), color-stop(155%, #e942ff));
   background-image: linear-gradient(to top, #8838ff -12%, #e942ff 155%);
-  width: 50%;
+  width: 100%;
+  max-width: 50%;
   height: 55%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -47,17 +61,44 @@ a {
   left: 0;
 }
 
+@media (min-width: 960px) {
+  .first-section::before {
+    max-width: 30%;
+    height: 90vh;
+    border-bottom-left-radius: 200px;
+    left: -3em;
+  }
+}
+
+@media (min-width: 960px) {
+  .first-section {
+    margin: auto;
+    max-width: 50%;
+    width: 100%;
+  }
+}
+
 .phone-frame {
   background-color: #f5f3f7;
+  position: relative;
   width: 100%;
   max-width: 250px;
   height: auto;
   margin: 3em auto;
-  margin-top: 14%;
+  margin-top: 16%;
   border-radius: 25px;
   border: white solid 10px;
   -webkit-box-shadow: 4px 34px 59px #cfcfcf;
           box-shadow: 4px 34px 59px #cfcfcf;
+}
+
+@media (min-width: 960px) {
+  .phone-frame {
+    margin: auto;
+    margin: auto;
+    margin-right: 7em;
+    margin-top: 5em;
+  }
 }
 
 .phone-frame .header {
@@ -65,6 +106,9 @@ a {
   background-image: linear-gradient(to right, #8838ff -10%, #e942ff 115%);
   border-radius: 25px 25px 7px 7px;
   padding-bottom: 0.7em;
+  border-color: white;
+  border-style: none;
+  outline: none;
 }
 
 .phone-frame .header .white-block {
@@ -111,6 +155,7 @@ a {
   margin: auto;
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
+  cursor: pointer;
 }
 
 .phone-frame .header .contact .contact-details .svg path {
@@ -261,17 +306,16 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin: 10px;
-  background: white;
-  border-radius: 24px;
+  position: relative;
 }
 
 .phone-frame .search-bar input {
-  width: calc(100% - 35px);
-  padding: 0.8em 1.5em;
+  width: 100%;
+  padding: 1.2em 1.5em;
   font-size: 8px;
   border-radius: 24px;
   border: none;
@@ -280,9 +324,9 @@ a {
 }
 
 .phone-frame .search-bar button {
+  position: absolute;
   border-radius: 50%;
   padding: 4px;
-  margin: 0.5em;
   outline: none;
   border: none;
   background: #3e2753;
@@ -290,7 +334,7 @@ a {
   width: 25px;
   height: 25px;
   cursor: pointer;
-  margin: 7px;
+  margin: 3px;
 }
 
 .phone-frame .search-bar button svg {
@@ -303,8 +347,9 @@ a {
   content: "";
   position: absolute;
   background: #8838ff;
-  width: 50%;
-  height: 35%;
+  width: 100%;
+  max-width: 50%;
+  height: 40%;
   background-size: cover;
   background-repeat: no-repeat;
   right: 0;
@@ -314,6 +359,25 @@ a {
   opacity: 0.05;
 }
 
+@media (min-width: 960px) {
+  .second-section::before {
+    max-width: 30%;
+    right: -7em;
+    height: 100vh;
+    top: 20vh;
+    bottom: auto;
+    border-top-right-radius: 200px;
+  }
+}
+
+@media (min-width: 960px) {
+  .second-section {
+    margin: auto;
+    max-width: 50%;
+    width: 100%;
+  }
+}
+
 .content {
   width: 100%;
   max-width: 300px;
@@ -321,8 +385,17 @@ a {
   text-align: center;
 }
 
+@media (min-width: 960px) {
+  .content {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    max-width: 450px;
+  }
+}
+
 .content h1 {
-  font-size: 35px;
+  font-size: 36.8px;
   margin: 1em auto;
   color: #3e2753;
 }
@@ -334,8 +407,8 @@ a {
 .content .attribution {
   margin-top: 1.5em;
   line-height: 1.8em;
-  font-size: 11px;
-  text-align: center;
+  font-size: 12px;
+  text-align: left;
 }
 
 .content .attribution a {

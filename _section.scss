@@ -1,8 +1,16 @@
 .first-section::before {
+    @include large {
+        max-width: 30%;
+        height: 90vh;
+        border-bottom-left-radius: 200px;
+        left: -3em;
+    }
+
     content: "";
     position: absolute;
     background-image: $left-box-bg-color;
-    width: 50%;
+    width: 100%;
+    max-width: 50%;
     height: 55%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -12,13 +20,28 @@
     left: 0;
 }
 
+.first-section {
+     @include large {
+        margin: auto;
+        max-width: 50%;
+        width: 100%;
+    }
+}
+
 .phone-frame {
+    @include large {
+        margin: auto;
+        margin: auto;
+        margin-right: 7em;
+        margin-top: 5em;
+    }
     background-color: $app-background;
+    position: relative;
     width: 100%;
     max-width: 250px;
     height: auto;
     margin: 3em auto;
-    margin-top: 14%;
+    margin-top: 16%;
     border-radius: 25px;
     border: $white solid 10px;
     box-shadow: 4px 34px 59px #cfcfcf;
@@ -27,6 +50,9 @@
             background-image: $app-header-bg;
             border-radius: 25px 25px 7px 7px;
             padding-bottom: 0.7em;
+            border-color: $white;
+            border-style: none;
+            outline: none;
 
             .white-block {
                 width: 120px;
@@ -59,6 +85,7 @@
                         color: $white;
                         margin: auto; 
                         transform: scale(0.7);
+                        cursor: pointer;
                     }
 
                     .svg path {
@@ -82,12 +109,12 @@
                         padding: 0 3px;
 
                         .sub-heading {
-                            font-size: 12px;
+                            font-size: $sub-heading-size;
                             color: $white;
                         }
 
                         p {
-                            font-size: 8px;
+                            font-size: $mobile-paragraph;
                             color: $sub-heading;
                         }
                     }
@@ -111,7 +138,7 @@
 
             p {
                 color: $chat-left;
-                font-size: 8px;
+                font-size: $mobile-paragraph;
                 padding: 3px 3px;
             }
         }
@@ -141,7 +168,7 @@
 
                 p {
                 color: $chat-right;
-                font-size: 8px;
+                font-size: $mobile-paragraph;
                 padding: 3px 7px;
             }
         }
@@ -165,7 +192,7 @@
                     align-items: center;
                     margin: 0;
                         p {
-                            font-size: 8px;
+                            font-size: $mobile-paragraph;
                             font-weight: 300;
                             padding: 0 3px;
                             opacity: 0.7;
@@ -187,15 +214,16 @@
         .search-bar {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
             margin: 10px;
-            background: $white;
-            border-radius: 24px;
+            position: relative;
+            // background: $white;
+            // border-radius: 24px;
 
             input {
-                width: calc(100% - 35px);
-                padding: 0.8em 1.5em;
-                font-size: 8px;
+                width: 100%;
+                padding: 1.2em 1.5em;
+                font-size: $mobile-paragraph;
                 border-radius: 24px;
                 border: none;
                 outline: none;
@@ -203,9 +231,9 @@
             }
 
             button {
+                position: absolute;
                 border-radius: 50%;
                 padding: 4px;
-                margin: 0.5em;
                 outline: none;
                 border: none;
                 background: $submit-btn-bg;
@@ -213,7 +241,7 @@
                 width: 25px;
                 height: 25px;
                 cursor: pointer;
-                margin: 7px;
+                margin: 3px;
 
                 svg {
                     stroke-width: 100px;
@@ -224,11 +252,20 @@
 }
 
 .second-section::before {
+    @include large {
+        max-width: 30%;
+        right: -7em;
+        height: 100vh;
+        top: 20vh;
+        bottom: auto;
+        border-top-right-radius: 200px;
+    }
     content: "";
     position: absolute;
     background: $light-violet;
-    width: 50%;
-    height: 35%;
+    width: 100%;
+    max-width: 50%;
+    height: 40%;
     background-size: cover;
     background-repeat: no-repeat;
     right: 0;
@@ -238,26 +275,39 @@
     opacity: 0.05;  
 }
 
+.second-section {
+     @include large {
+        margin: auto;
+        max-width: 50%;
+        width: 100%;
+    }
+}
 .content {
+    @include large {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        max-width: 450px;
+    }
     width: 100%;
     max-width: 300px;
     margin: auto;
     text-align: center;
 
     h1 {
-        font-size: 35px;
+        font-size: $main-heading-size;
         margin: 1em auto;
         color: $main-heading;
     }
     p {
-        line-height: 1.8em;
+        line-height: $paragraph-height;
     }
 
     .attribution { 
         margin-top: 1.5em;
-        line-height: 1.8em;
-        font-size: 11px; 
-        text-align: center; 
+        line-height: $paragraph-height;
+        font-size: $sub-heading-size; 
+        text-align: left; 
 
         a { color: hsl(228, 45%, 44%); }
     }
