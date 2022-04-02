@@ -13,5 +13,6 @@ body {
     @include large {
         flex-direction: row;
         overflow-x: hidden;
+        overflow-y: hidden;
     }
 }
