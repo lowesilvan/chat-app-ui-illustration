@@ -16,7 +16,6 @@ body {
   padding: 0;
   padding-bottom: 2em;
   margin-bottom: 1em;
-  overflow-y: hidden;
   left: 0;
   color: #a39daa;
   position: relative;
@@ -42,6 +41,7 @@ a {
         -ms-flex-direction: row;
             flex-direction: row;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 }
 
